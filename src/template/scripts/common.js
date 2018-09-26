@@ -11,20 +11,28 @@ $(document).ready(function($) {
 		item.removeClass('product_hover');
 	});
 
-	var selectedClass = 'selected';
+	var selectedClass = 'selected'
 
-	$('.catalog__nav li').click(function(event) {
-		var text = $(this).text(),
-				items = $(this).parents('.catalog__nav').next('.catalog__list').find('.catalog__item'),
-				itemsSelected = $(this).parents('.catalog__nav').next('.catalog__list').find('.catalog__item[data-filter *= "' + text + '"]');
-		if (!$(this).hasClass(selectedClass)) {
-			var selectedLink = $(this).siblings('.selected');
-			selectedLink.removeClass(selectedClass);
 
-			$(this).addClass(selectedClass);
-			items.fadeOut(300);
-			itemsSelected.fadeIn(300);
-		}
+	$('.catalog__nav li a').click(function(event) {
+		var href = $(this).attr('href');
+		if (href == '#') {
+			event.preventDefault();
+
+			var text = $(this).text(),
+					items = $(this).parents('.catalog__nav').next('.catalog__list').find('.catalog__item'),
+					itemsSelected = $(this).parents('.catalog__nav').next('.catalog__list').find('.catalog__item[data-filter *= "' + text + '"]');
+			if (!$(this).hasClass(selectedClass)) {
+				var selectedLink = $(this).siblings('.selected');
+				selectedLink.removeClass(selectedClass);
+
+				$(this).addClass(selectedClass);
+				items.fadeOut(300);
+				itemsSelected.fadeIn(300);
+			}
+		} 
+
+		
 	});
 
 	$('.reviews__list').slick({
@@ -88,5 +96,6 @@ $(document).ready(function($) {
 	$('select').styler();
 
 
+	new WOW().init();
 
 });

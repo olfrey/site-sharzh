@@ -1,6 +1,7 @@
 /* Including styles files */
 @import url(../../libs/fancybox/dist/jquery.fancybox.css);
 @import url(../../libs/slick-carousel/slick/slick.css);
+@import url(../../libs/animate.css/animate.css);
 .icon-arrow-left-white {
   background-image: url(../../img/sprite.png);
   background-position: 0px 0px;
@@ -382,6 +383,7 @@ input, textarea, button {
             border-radius: 0 0 6px 6px;
     font-size: 16px;
     max-height: 190px;
+    width: 100% !important;
     overflow-y: auto; }
     .select .jq-selectbox__dropdown li {
       width: 100%;
@@ -693,6 +695,27 @@ input, .btn, .slick-slide, textarea {
       margin-left: -4px;
       margin-right: -4px; }
     .catalog__nav li {
+      border: 2px solid #a1a1a1;
+      color: #a1a1a1;
+      -webkit-transition: .3s;
+      transition: .3s;
+      cursor: pointer;
+      margin-left: 4px;
+      margin-right: 4px;
+      -webkit-border-radius: 50px;
+              border-radius: 50px; }
+      .catalog__nav li.selected, .catalog__nav li:hover {
+        color: #f75a94;
+        border-color: #f75a94; }
+        .catalog__nav li.selected a, .catalog__nav li:hover a {
+          color: #f75a94; }
+      .catalog__nav li.selected {
+        cursor: default; }
+    .catalog__nav a {
+      display: block;
+      color: #a1a1a1;
+      padding-left: 62px;
+      padding-right: 62px;
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -705,25 +728,9 @@ input, .btn, .slick-slide, textarea {
       -webkit-justify-content: center;
           -ms-flex-pack: center;
               justify-content: center;
-      border: 2px solid #a1a1a1;
-      -webkit-border-radius: 50px;
-              border-radius: 50px;
       font-size: 16px;
       font-weight: 700;
-      color: #a1a1a1;
-      -webkit-transition: .3s;
-      transition: .3s;
-      cursor: pointer;
-      height: 54px;
-      margin-left: 4px;
-      margin-right: 4px;
-      padding-left: 62px;
-      padding-right: 62px; }
-      .catalog__nav li.selected, .catalog__nav li:hover {
-        color: #f75a94;
-        border-color: #f75a94; }
-      .catalog__nav li.selected {
-        cursor: default; }
+      height: 54px; }
   .catalog__list {
     margin-left: -13px;
     margin-right: -13px; }

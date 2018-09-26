@@ -5,10 +5,10 @@
 	<title>ТВОЯ - мини копия</title>
 	<link rel="shortcut icon" href="favicon.png" type="image/png">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1" />
-	<link rel="stylesheet" href="template/styles/css/style.css" />
-	<link rel="stylesheet" href="template/styles/css/responsive.css" />
-	<script src="template/scripts/libs.js"></script>
-	<script src="template/scripts/common.js"></script>
+	<link rel="stylesheet" href="template/styles/css/style.css?ver=1" />
+	<link rel="stylesheet" href="template/styles/css/responsive.css?ver=1" />
+	<script src="template/scripts/libs.js?ver=1"></script>
+	<script src="template/scripts/common.js?ver=1"></script>
 	<!--[if lt IE 9]>
 	<script>
 		document.createElement('header');
@@ -47,16 +47,16 @@
 		</div>
 		<div class="header__content">
 			<div class="case">
-				<div class="header__title title"><span>Подвижные портретные <b>игрушки</b></span></div>
-				<div class="header__desc">100 % сходство!</div>
-				<div class="header__text">
+				<div class="header__title title wow animated fadeInLeft"><span>Подвижные портретные <b>игрушки</b></span></div>
+				<div class="header__desc wow animated fadeInLeft">100 % сходство!</div>
+				<div class="header__text wow animated fadeInLeft">
 					<ul>
 						<li>Уникальный и неожиданный подарок</li>
 						<li>Хороший подарок мужу или жене, <br>коллегам, друзьям и родителям</li>
 						<li>Доставка по всей России и зарубеж от 2 дней</li>
 					</ul>
 				</div>
-				<a data-fancybox data-src="#popup-order" href="javascript:;" class="header__btn btn btn_border"><span>Заказать</span></a>
+				<a data-fancybox data-src="#popup-order" href="javascript:;" class="header__btn btn btn_border wow animated fadeInLeft"><span>Заказать</span></a>
 			</div>
 		</div>
 	</header>
@@ -66,15 +66,15 @@
 		<div class="advantages triangles">
 			<div class="case">
 				<div class="advantages__list row between">
-					<div class="advantages__item">
+					<div class="advantages__item wow animated fadeInLeft">
 						<div class="advantages__icon"><img src="upload/advantages/hands.png" alt=""></div>
 						<div class="advantages__text">100% ручная работа</div>
 					</div>
-					<div class="advantages__item">
+					<div class="advantages__item wow animated fadeInUp">
 						<div class="advantages__icon"><img src="upload/advantages/sharzh.png" alt=""></div>
 						<div class="advantages__text">Гарантия <br>портретного сходства</div>
 					</div>
-					<div class="advantages__item">
+					<div class="advantages__item wow animated fadeInRight">
 						<div class="advantages__icon"><img src="upload/advantages/couple.png" alt=""></div>
 						<div class="advantages__text">Не просто игрушка, <br>а портретная двигающаяся игрушка</div>
 					</div>
@@ -83,18 +83,18 @@
 		</div>
 		<div class="catalog">
 			<div class="case">
-				<div class="catalog__title title"><span>Готовые игрушки или индивидуальный заказ?</span></div>
-				<div class="catalog__desc desc-big">Посмотрите каталог готовых игрушек (любимые звезды, персонажи) или сделайте индивидуальный заказ</div>
+				<div class="catalog__title title wow animated fadeIn"><span>Готовые игрушки или индивидуальный заказ?</span></div>
+				<div class="catalog__desc desc-big wow animated fadeIn">Посмотрите каталог готовых игрушек (любимые звезды, персонажи) или сделайте индивидуальный заказ</div>
 				<div class="catalog__nav">
 					<ul>
-						<li>Персонажи из фильмов</li>
-						<li>Персонажи из мультфильмов</li>
-						<li>Звезды</li>
-						<li>Индивидуальный заказ</li>
+						<li><a href="#">Персонажи из фильмов</a></li>
+						<li><a href="#">Персонажи из мультфильмов</a></li>
+						<li><a href="#">Звезды</a></li>
+						<li><a data-fancybox data-src="#popup-order" href="javascript:;">Индивидуальный заказ</a></li>
 					</ul>
 				</div>
 				<div class="catalog__list row">
-					<div class="catalog__item product product_bestseller" data-filter="Персонажи из фильмов Персонажи из мультфильмов">
+					<div class="catalog__item product wow animated fadeIn product_bestseller" data-filter="Персонажи из фильмов Персонажи из мультфильмов">
 						<div class="product__img"><img src="upload/products/1.png" alt=""></div>
 						<div class="product__content">
 							<div class="product__data row">
@@ -104,7 +104,7 @@
 							<a data-fancybox data-src="#popup-order" href="javascript:;"  class="product__btn btn btn_pink">Заказать</a>
 						</div>
 					</div>
-					<div class="catalog__item product" data-filter="Звезды">
+					<div class="catalog__item product wow animated fadeIn" data-filter="Звезды">
 						<div class="product__img"><img src="upload/products/1.png" alt=""></div>
 						<div class="product__content">
 							<div class="product__data row">
@@ -114,7 +114,7 @@
 							<a data-fancybox data-src="#popup-order" href="javascript:;"  class="product__btn btn btn_pink">Заказать</a>
 						</div>
 					</div>
-					<div class="catalog__item product" data-filter="Индивидуальный заказ">
+					<div class="catalog__item product wow animated fadeIn" data-filter="Звезды">
 						<div class="product__img"><img src="upload/products/1.png" alt=""></div>
 						<div class="product__content">
 							<div class="product__data row">
@@ -124,7 +124,7 @@
 							<a data-fancybox data-src="#popup-order" href="javascript:;"  class="product__btn btn btn_pink">Заказать</a>
 						</div>
 					</div>
-					<div class="catalog__item product" data-filter="Персонажи из мультфильмов Персонажи из фильмов">
+					<div class="catalog__item product wow animated fadeIn" data-filter="Персонажи из мультфильмов Персонажи из фильмов">
 						<div class="product__img"><img src="upload/products/1.png" alt=""></div>
 						<div class="product__content">
 							<div class="product__data row">
@@ -134,7 +134,7 @@
 							<a data-fancybox data-src="#popup-order" href="javascript:;"  class="product__btn btn btn_pink">Заказать</a>
 						</div>
 					</div>
-					<div class="catalog__item product" data-filter="Звезды Персонажи из мультфильмов">
+					<div class="catalog__item product wow animated fadeIn" data-filter="Звезды Персонажи из мультфильмов">
 						<div class="product__img"><img src="upload/products/1.png" alt=""></div>
 						<div class="product__content">
 							<div class="product__data row">
@@ -144,7 +144,7 @@
 							<a data-fancybox data-src="#popup-order" href="javascript:;"  class="product__btn btn btn_pink">Заказать</a>
 						</div>
 					</div>
-					<div class="catalog__item product product_bestseller" data-filter="Персонажи из фильмов">
+					<div class="catalog__item product wow animated fadeIn product_bestseller" data-filter="Персонажи из фильмов">
 						<div class="product__img"><img src="upload/products/1.png" alt=""></div>
 						<div class="product__content">
 							<div class="product__data row">
@@ -154,7 +154,7 @@
 							<a data-fancybox data-src="#popup-order" href="javascript:;"  class="product__btn btn btn_pink">Заказать</a>
 						</div>
 					</div>
-					<div class="catalog__item product product_bestseller" data-filter="Звезды">
+					<div class="catalog__item product wow animated fadeIn product_bestseller" data-filter="Звезды">
 						<div class="product__img"><img src="upload/products/1.png" alt=""></div>
 						<div class="product__content">
 							<div class="product__data row">
@@ -164,7 +164,7 @@
 							<a data-fancybox data-src="#popup-order" href="javascript:;"  class="product__btn btn btn_pink">Заказать</a>
 						</div>
 					</div>
-					<div class="catalog__item product" data-filter="Индивидуальный заказ">
+					<div class="catalog__item product wow animated fadeIn" data-filter="Персонажи из фильмов">
 						<div class="product__img"><img src="upload/products/1.png" alt=""></div>
 						<div class="product__content">
 							<div class="product__data row">
@@ -179,11 +179,11 @@
 		</div>
 		<div class="package">
 			<div class="case">
-				<div class="package__title title"><span>Стандартная упаковка</span></div>
-				<div class="package__desc desc-big">Упаковываем в красивую фирменную коробку или можем изготовить упаковку для вашего заказа</div>
-				<div class="package__img"><img src="upload/package.png" alt=""></div>
+				<div class="package__title title wow animated fadeIn"><span>Стандартная упаковка</span></div>
+				<div class="package__desc desc-big wow animated fadeIn">Упаковываем в красивую фирменную коробку или можем изготовить упаковку для вашего заказа</div>
+				<div class="package__img wow animated fadeIn"><img src="upload/package.png" alt=""></div>
 				<div class="package__list catalog__list row">
-					<div class="catalog__item product product_bestseller" data-filter="">
+					<div class="catalog__item product wow animated fadeIn product_bestseller" data-filter="">
 						<div class="product__img"><img src="upload/products/2.png" alt=""></div>
 						<div class="product__content">
 							<div class="product__data row">
@@ -193,7 +193,7 @@
 							<a data-fancybox data-src="#popup-order" href="javascript:;"  class="product__btn btn btn_pink">Заказать</a>
 						</div>
 					</div>
-					<div class="catalog__item product" data-filter="">
+					<div class="catalog__item product wow animated fadeIn" data-filter="">
 						<div class="product__img"><img src="upload/products/2.png" alt=""></div>
 						<div class="product__content">
 							<div class="product__data row">
@@ -203,7 +203,7 @@
 							<a data-fancybox data-src="#popup-order" href="javascript:;"  class="product__btn btn btn_pink">Заказать</a>
 						</div>
 					</div>
-					<div class="catalog__item product" data-filter="">
+					<div class="catalog__item product wow animated fadeIn" data-filter="">
 						<div class="product__img"><img src="upload/products/2.png" alt=""></div>
 						<div class="product__content">
 							<div class="product__data row">
@@ -213,7 +213,7 @@
 							<a data-fancybox data-src="#popup-order" href="javascript:;"  class="product__btn btn btn_pink">Заказать</a>
 						</div>
 					</div>
-					<div class="catalog__item product" data-filter="">
+					<div class="catalog__item product wow animated fadeIn" data-filter="">
 						<div class="product__img"><img src="upload/products/2.png" alt=""></div>
 						<div class="product__content">
 							<div class="product__data row">
@@ -228,9 +228,9 @@
 		</div>
 		<div class="reviews">
 			<div class="case">
-				<div class="reviews__title title"><span>Портретные игрушки <br>нравятся всем без исключения</span></div>
-				<div class="reviews__desc desc-big">Счастливые глаза и улыбки до ушей - это лучшая благодарность наших клиентов</div>
-				<div class="reviews__list">
+				<div class="reviews__title title wow animated fadeIn"><span>Портретные игрушки <br>нравятся всем без исключения</span></div>
+				<div class="reviews__desc desc-big wow animated fadeIn">Счастливые глаза и улыбки до ушей - это лучшая благодарность наших клиентов</div>
+				<div class="reviews__list wow animated fadeIn">
 					<div class="reviews__item">
 						<div class="reviews__work" style="background-image: url('upload/reviews/1-2.png');"></div>
 						<div class="reviews__content">
@@ -340,65 +340,65 @@
 		</div>
 		<div class="question triangles">
 			<div class="case">
-				<div class="question__title title"><span>Хотите узнать как мы делаем портретные игрушки?</span></div>
-				<div class="question__desc desc-big">Ручная работа, много творчества, много любви и 5 дней кропотливой работы!</div>
+				<div class="question__title title wow animated fadeIn"><span>Хотите узнать как мы делаем портретные игрушки?</span></div>
+				<div class="question__desc desc-big wow animated fadeIn">Ручная работа, много творчества, много любви и 5 дней кропотливой работы!</div>
 			</div>
 		</div>
 		<div class="steps">
 			<div class="case">
 				<div class="steps__list row between">
-					<div class="steps__item">
+					<div class="steps__item wow animated fadeInLeft">
 						<div class="steps__img"><img src="upload/steps/1.png" alt=""></div>
 						<div class="steps__content">
 							<div class="steps__name">Согласовываем сюжет и техническое задание</div>
 							<div class="steps__text">Вы выбираете готовую игрушку или согласовывайте техническое задание и сюжет на индивидуальный заказ</div>
 						</div>
 					</div>
-					<div class="steps__item">
+					<div class="steps__item wow animated fadeInUp">
 						<div class="steps__img"><img src="upload/steps/2.png" alt=""></div>
 						<div class="steps__content">
 							<div class="steps__name">В работу включается графический дизайнер</div>
 							<div class="steps__text">Графический дизайнер отрисовывает макет будущего шаржа по согласованному техническому заданию и сюжету</div>
 						</div>
 					</div>
-					<div class="steps__item">
+					<div class="steps__item wow animated fadeInRight">
 						<div class="steps__img"><img src="upload/steps/3.png" alt=""></div>
 						<div class="steps__content">
 							<div class="steps__name">Режем по-настоящему</div>
 							<div class="steps__text">Согласованный макет отправляется на лазерную резку</div>
 						</div>
 					</div>
-					<div class="steps__item">
+					<div class="steps__item wow animated fadeInRight">
 						<div class="steps__img"><img src="upload/steps/4.png" alt=""></div>
 						<div class="steps__content">
 							<div class="steps__name">В работе золотые руки MiMiCopy</div>
 							<div class="steps__text">Мария - наш незаменимый художник рисует игрушку. По необходимости отправляем на согласование с клиентом</div>
 						</div>
 					</div>
-					<div class="steps__item">
+					<div class="steps__item wow animated fadeInUp">
 						<div class="steps__img"><img src="upload/steps/5.png" alt=""></div>
 						<div class="steps__content">
 							<div class="steps__name">Сборка и тест-драйв</div>
 							<div class="steps__text">Собираем игрушку и проводим ее тест-драйв</div>
 						</div>
 					</div>
-					<div class="steps__item">
+					<div class="steps__item wow animated fadeIn">
 						<div class="steps__img"><img src="upload/steps/hearts.png" alt=""></div>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="btn-wrap">
-			<a data-fancybox data-src="#popup-order" href="javascript:;" class="btn-wrap__btn btn btn_pink">Оформить заказ</a>
+			<a data-fancybox data-src="#popup-order" href="javascript:;" class="btn-wrap__btn btn btn_pink wow animated fadeIn">Оформить заказ</a>
 		</div>
 		<div class="instagram">
 			<div class="instagram__data">
 				<div class="case">
-					<div class="instagram__title title"><span>Подписывайтесь на нас</span></div>
-					<div class="instagram__link"><a href="//instagram/mi_mi_copy" target="_blank">@mi_mi_copy</a></div>
+					<div class="instagram__title title wow animated fadeIn"><span>Подписывайтесь на нас</span></div>
+					<div class="instagram__link wow animated fadeIn"><a href="//instagram/mi_mi_copy" target="_blank">@mi_mi_copy</a></div>
 				</div>
 			</div>
-			<div class="instagram__list row">
+			<div class="instagram__list wow animated fadeIn row">
 				<div class="instagram__item" style="background-image: url('upload/instagram/1.png');"></div>
 				<div class="instagram__item" style="background-image: url('upload/instagram/2.png');"></div>
 				<div class="instagram__item" style="background-image: url('upload/instagram/3.png');"></div>
@@ -414,34 +414,34 @@
 			</div>
 		</div>
 		<div class="btn-wrap">
-			<a data-fancybox data-src="#" href="javascript:;" class="btn-wrap__btn btn btn_pink">Подписаться</a>
+			<a data-fancybox data-src="#" href="javascript:;" class="btn-wrap__btn btn btn_pink wow animated fadeIn">Подписаться</a>
 		</div>
 		<div class="team">
 			<div class="case">
-				<div class="team__title title"><span>Команда Mi Mi Copy</span></div>
+				<div class="team__title title wow animated fadeIn"><span>Команда Mi Mi Copy</span></div>
 				<div class="team__list row">
-					<div class="team__item">
+					<div class="team__item wow animated fadeInLeft">
 						<div class="team__img"><img src="upload/team/1.png" alt=""></div>
 						<div class="team__content">
 							<div class="team__name">Вероника Давлетшина</div>
 							<div class="team__position">Главный зачинщик</div>
 						</div>
 					</div>
-					<div class="team__item">
+					<div class="team__item wow animated fadeInUp">
 						<div class="team__img"><img src="upload/team/1.png" alt=""></div>
 						<div class="team__content">
 							<div class="team__name">Мария Мелымук</div>
 							<div class="team__position">Главный по общению</div>
 						</div>
 					</div>
-					<div class="team__item">
+					<div class="team__item wow animated fadeInUp">
 						<div class="team__img"><img src="upload/team/1.png" alt=""></div>
 						<div class="team__content">
 							<div class="team__name">Дарья Трубицина</div>
 							<div class="team__position">Главный рисовальщик</div>
 						</div>
 					</div>
-					<div class="team__item">
+					<div class="team__item wow animated fadeInRight">
 						<div class="team__img"><img src="upload/team/1.png" alt=""></div>
 						<div class="team__content">
 							<div class="team__name">Рашид Давлетшин</div>
