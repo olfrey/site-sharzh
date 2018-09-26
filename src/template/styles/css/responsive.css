@@ -273,8 +273,9 @@
   .header__content .case:before {
     width: 280px;
     height: 335px;
-    margin-left: -12px;
-    margin-bottom: 25px; }
+    margin-left: auto;
+    margin-bottom: 25px;
+    right: 15px; }
   .header__title {
     margin-bottom: 15px; }
     .header__title span {
