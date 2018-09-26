@@ -1,0 +1,89 @@
+.icon-arrow-left-white {
+  background-image: url(../../img/sprite.png);
+  background-position: 0px 0px;
+  width: 76px;
+  height: 38px; }
+
+.icon-arrow-right-white {
+  background-image: url(../../img/sprite.png);
+  background-position: 0px -38px;
+  width: 76px;
+  height: 38px; }
+
+.icon-chat-blue {
+  background-image: url(../../img/sprite.png);
+  background-position: 0px -113px;
+  width: 41px;
+  height: 34px; }
+
+.icon-chat-yellow {
+  background-image: url(../../img/sprite.png);
+  background-position: -76px 0px;
+  width: 48px;
+  height: 44px; }
+
+.icon-check-gray {
+  background-image: url(../../img/sprite.png);
+  background-position: -162px -121px;
+  width: 29px;
+  height: 21px; }
+
+.icon-check-pink {
+  background-image: url(../../img/sprite.png);
+  background-position: -162px -100px;
+  width: 29px;
+  height: 21px; }
+
+.icon-email-blue {
+  background-image: url(../../img/sprite.png);
+  background-position: -41px -113px;
+  width: 39px;
+  height: 30px; }
+
+.icon-email-yellow {
+  background-image: url(../../img/sprite.png);
+  background-position: 0px -76px;
+  width: 51px;
+  height: 37px; }
+
+.icon-instagram-blue {
+  background-image: url(../../img/sprite.png);
+  background-position: -162px -72px;
+  width: 28px;
+  height: 28px; }
+
+.icon-instagram-yellow {
+  background-image: url(../../img/sprite.png);
+  background-position: -124px -43px;
+  width: 37px;
+  height: 38px; }
+
+.icon-phone-blue {
+  background-image: url(../../img/sprite.png);
+  background-position: -162px -36px;
+  width: 30px;
+  height: 36px; }
+
+.icon-phone-yellow {
+  background-image: url(../../img/sprite.png);
+  background-position: -124px 0px;
+  width: 38px;
+  height: 43px; }
+
+.icon-vk-blue {
+  background-image: url(../../img/sprite.png);
+  background-position: -76px -44px;
+  width: 39px;
+  height: 31px; }
+
+.icon-vk-yellow {
+  background-image: url(../../img/sprite.png);
+  background-position: -51px -76px;
+  width: 49px;
+  height: 37px; }
+
+.icon-x {
+  background-image: url(../../img/sprite.png);
+  background-position: -162px 0px;
+  width: 35px;
+  height: 36px; }

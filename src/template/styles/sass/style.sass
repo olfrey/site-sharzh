@@ -3,11 +3,13 @@
 @import fonts.sass
 @import grid.sass
 @import '../../libs/fancybox/dist/jquery.fancybox.css'
+@import '../../libs/slick-carousel/slick/slick.css'
 
 
 /* Global settings */
-$font-size: 16px
-$font-family-1: 'Tahoma', sans-serif
+$font-size: 18px
+$font-family-1: 'Gilroy', sans-serif
+$font-family-2: 'Royana', sans-serif
 $color-1: #000
 
 
@@ -58,30 +60,176 @@ input, textarea, button
 	position: relative
 	&__wrap
 		display: block
-		font-size: $font-size
+		font-size: 16px
 		font-family: $font-family-1
 		background: white
 		width: 100%
+		height: 59px
+		border: 1px solid #bdbdbd
+		border-radius: 6px
+		padding: 0 18px
+		&::placeholder
+			opacity: 1
+			color: #898989
 
 
 .textarea
 	position: relative
+	&__title
+		font-size: 16px
+		font-weight: 700
+		display: block
+		margin-bottom: 14px
+		
 	&__wrap
 		display: block
-		font-size: $font-size
+		font-size: 16px
 		font-family: $font-family-1
 		background: white
 		width: 100%
 		resize: none
+		border-radius: 6px
+		border: 1px solid #bdbdbd
+		padding: 17px 22px
+		&::placeholder
+			opacity: 1
+			color: #898989
+
+.select
+	&__title
+		display: block
+		font-size: 16px
+		font-weight: 700
+		margin-bottom: 12px
+	&__wrap
+		select
+			display: none
+
+	.jq-selectbox
+		position: relative
+		&.opened
+			.jq-selectbox
+				&__select
+					border-radius: 6px 6px 0 0
+
+					
+		&__select
+			position: relative
+			border: 1px solid #bdbdbd
+			height: 59px
+			border-radius: 6px
+			align-items: center
+			display: flex
+			padding-left: 18px
+			padding-right: 18px
+			&-text
+				font-size: 16px
+
+		&__trigger
+			&-arrow
+				top: 24px
+				right: 20px
+				display: block
+				position: absolute
+				content: ''
+				width: 0
+				height: 0
+				border-style: solid
+				border-width: 12px 7px 0 7px
+				border-color: #d0d0d0 transparent transparent transparent
+
+		&__dropdown
+			z-index: 2
+			position: absolute
+			top: 58px !important
+			left: 0
+			right: 0
+			border: 1px solid #bdbdbd
+			background-color: #fff
+			border-radius: 0 0 6px 6px
+			font-size: 16px
+			max-height: 190px
+			overflow-y: auto
+			li
+				width: 100%
+				padding: 9px 20px
+				border-bottom: 1px solid #bdbdbd
+				transition: .3s
+				cursor: pointer
+				&:last-of-type
+					border-bottom: none
+				&.selected, &:hover
+					background-color: #bdbdbd
+
+			
+
+
+			
+		
+		
 
 .btn
 	position: relative
-	display: inline-block
-	font-size: 0
+	display: flex
+	align-items: center
+	justify-content: center
+	font-size: 14px
 	font-family: $font-family-1
 	cursor: pointer
 	text-align: center
 	transition: .3s
+	&_border
+		position: relative
+		width: 274px
+		height: 101px
+		span
+			position: relative
+			z-index: 2
+			width: 274px
+			height: 101px
+			display: block
+			background: url('../../img/bg/btn-border.png') no-repeat center
+		&:before, &:after
+			z-index: 1
+			content: ''
+			display: block
+			position: absolute
+			background-position: center
+			background-repeat: no-repeat
+			width: 275px
+			height: 99px
+			top: 0
+			left: 7px
+			transition: .3s
+		&:before
+			background-image: url('../../img/bg/btn-shadow-pink.png')
+
+		&:after
+			opacity: 0
+			background-image: url('../../img/bg/btn-shadow-yellow.png')
+		&:hover
+			&:before
+				opacity: 0
+			&:after
+				opacity: 1
+
+		span
+			font-size: 48px
+			font-family: $font-family-2
+			background-position: 0 0
+			padding-top: 23px
+
+	&_pink
+		height: 50px
+		font-weight: 700
+		border-radius: 50px
+		color: #ffffff
+		background-color: #f75a94
+		border: 2px solid #f75a94
+		&:hover
+			color: #f75a94
+			background-color: #fff
+
 
 .input input, .textarea textarea
 	transition: .3s
@@ -103,14 +251,1036 @@ input, .btn, .slick-slide, textarea
 	margin-left: auto
 	margin-right: auto
 
-
+.icon
+	display: inline-block
+	vertical-align: middle
 
 .main-wrap
-	// overflow-x: hidden
+	overflow-x: hidden
+	max-width: 1920px
+	margin-left: auto
+	margin-right: auto
+
+.desc
+	font-weight: 700
+
+.desc-big
+	font-size: 24px
+	font-weight: 700
+
+.logo
+	&__icon
+	
+	&__text
+		max-width: 185px
+		margin-left: 23px
+	
+		
+.socials
+	&__text
+		margin-right: 18px
+		
+	&__list
+		ul
+			align-items: center
+		li
+			margin-right: 9px
+			&:last-of-type
+				margin-right: 0
+		a
+			display: block
+			&:hover
+				transform: scale(.85)
+		
+
+.title
+	text-align: center
+	span
+		display: block
+		z-index: 2
+		position: relative
+		font-size: 110px
+		line-height: 82.68px
+		font-family: $font-family-2
+	&:before
+		z-index: 1
+		display: block
+		content: ''
+		position: absolute
+		background-position: center
+		background-repeat: no-repeat
+		
+		
+
+.panel
+	padding-top: 20px
+	&__desc
+		max-width: 175px
+		text-align: center
+
+
+.header
+	&__content
+		padding-top: 95px
+		padding-bottom: 115px
+		.case
+			&:before
+				display: block
+				content: ''
+				position: absolute
+				width: 680px
+				height: 810px
+				right: -10px
+				top: -70px
+				background: url('../../img/bg/main-photo.png') no-repeat center
+	&__title
+		text-align: left
+		&:before
+			top: 0px
+			left: -45px
+			width: 635px
+			height: 190px
+			background-image: url('../../img/bg/text/text-bg-1.png')
+		span
+			font-size: 72px
+		b
+			display: block
+			font-size: 210px
+			font-weight: 400
+
+	&__desc
+		z-index: 2
+		position: relative
+		font-size: 60px
+		font-family: $font-family-2
+		margin-left: 290px
+		margin-top: -5px
+		margin-bottom: 95px
+		transform: rotate(-10deg)
+
+	&__text
+		margin-bottom: 60px
+		li
+			width: 100%
+			position: relative
+			padding-left: 70px
+			font-size: 34px
+			line-height: 30px
+			font-family: $font-family-2
+			margin-bottom: 35px
+			&:last-of-type
+				margin-bottom: 0
+			&:before
+				content: ''
+				position: absolute
+				left: 0
+				top: 50%
+				transform: translateY(-50%)
+				width: 39px
+				height: 46px
+				background: url('../../img/bg/star.png') no-repeat center
+		
+.triangles
+	position: relative
+	&:before, &:after
+		content: ''
+		position: absolute
+		width: 100%
+		height: 12px
+		background: url('../../img/bg/triangles.png') no-repeat center
+	&:before
+		top: -5px
+	&:after
+		bottom: -5px
+	
+		
+.advantages
+	padding-top: 32px
+	padding-bottom: 68px
+	background-color: #ffe500
+	&__item
+		min-width: 225px
+		&:nth-of-type(1)
+			.advantages
+				&__icon
+					justify-content: flex-start
+					
+	&__icon
+		height: 250px
+		line-height: 250px
+		display: flex
+		align-items: center
+		justify-content: center
+		margin-bottom: 10px
+	&__text
+		font-weight: 700
+		text-align: center
+		
+
+.catalog
+	padding-top: 90px
+	position: relative
+	z-index: 2
+	.case
+		&:before, &:after
+			content: ''
+			position: absolute
+			background-position: center
+			background-repeat: no-repeat
+		&:before
+			top: 180px
+			left: -(30px + 109px)
+			width: 109px
+			height: 105px
+			background-image: url('../../img/bg/audoplayer.png')
+		&:after
+			top: 40px
+			right: -88px
+			width: 95px
+			height: 122px
+			background-image: url('../../img/bg/coffie.png')
+
+	&__title
+		margin-bottom: 23px
+		
+	&__desc
+		max-width: 795px
+		margin-left: auto
+		margin-right: auto
+		text-align: center
+		margin-bottom: 73px
+
+	&__nav
+		margin-bottom: 47px
+		ul
+			margin-left: -4px
+			margin-right: -4px
+		li
+			display: flex
+			align-items: center
+			justify-content: center
+			border: 2px solid #a1a1a1
+			border-radius: 50px
+			font-size: 16px
+			font-weight: 700
+			color: #a1a1a1
+			transition: .3s
+			cursor: pointer
+			height: 54px
+			margin-left: 4px
+			margin-right: 4px
+			padding-left: 62px
+			padding-right: 62px
+			&.selected, &:hover
+				color: #f75a94
+				border-color: #f75a94
+			&.selected
+				cursor: default
+
+	&__list
+		margin-left: -13px
+		margin-right: -13px
+
+	&__item
+		margin-left: 13px
+		margin-right: 13px
+		margin-bottom: 37px
+		width: calc(25% - 26px)
+			
+
+
+.product
+	position: relative
+	box-shadow: 0 0 6px rgba(0, 0, 0, 0.15)
+	background-color: #fefefe
+	transition: .3s
+	&_hover
+		.product
+			&__content
+				color: #fff
+				background-color: #f75a94
+
+	&.selected
+		
+		.product
+			&__
+				
+				
+	&_bestseller
+		&:before
+			content: ''
+			position: absolute
+			background: url('../../img/bg/bestseller.png')
+			width: 105px
+			height: 98px
+			right: -20px
+			top: -9px
+	&__img
+		height: 305px
+		display: flex
+		align-items: center
+		justify-content: center
+		
+	&__content
+		transition: .3s
+		padding: 23px 13px 17px
+
+	&__data
+		margin-bottom: 5px
+		
+		
+	&__name
+		font-size: 16px
+		font-weight: 700
+		width: 120px
+		padding-top: 3px
+		min-height: 42px
+
+	&__price
+		font-size: 30px
+		line-height: 23px
+		font-weight: 700
+		margin-left: auto
+
+	&__btn
+		width: 160px
+		margin-left: auto
+		
+		
+.package
+	z-index: 1
+	position: relative
+	margin-top: -110px
+	margin-bottom: 90px
+	padding-top: 285px
+	background: url('../../img/bg/lamps.png') no-repeat center top 
+	&__title
+		margin-bottom: 20px
+		&:before
+			width: 861px
+			height: 71px
+			background-image: url('../../img/bg/text/text-bg-2.png')
+			left: 50%
+			top: 2px
+			transform: translateX(-50%)
+
+	&__desc
+		max-width: 800px
+		margin-left: auto
+		margin-right: auto
+		text-align: center
+		margin-bottom: 95px
+	
+	&__img
+		margin-bottom: 55px
+		img
+			margin-left: auto
+			margin-right: auto
+		
+		
+		
+.reviews
+	margin-bottom: 105px
+	&__title
+		margin-bottom: 30px
+		&:before
+			width: 1015px
+			height: 174px
+			background-image: url('../../img/bg/text/text-bg-3.png')
+			left: 50%
+			top: -13px
+			margin-left: 10px
+			transform: translateX(-50%)
+		&:after
+			content: ''
+			position: absolute
+			width: 52px
+			height: 82px
+			top: 0
+			left: 93px
+			background: url('../../img/bg/bird.png') no-repeat center
+
+	&__desc
+		text-align: center
+		margin-bottom: 84px
+		
+	&__list
+		padding-left: 64px
+		padding-right: 64px
+		.slick-arrow
+			background: none
+			top: 132px
+			position: absolute
+			font-size: 0
+			cursor: pointer
+			transition: .3s
+		.slick-prev
+			left: -15px
+			@include sprite($arrow-left-white)
+			&:hover
+				transform: translateX(-7px)
+
+		.slick-next
+			right: -15px
+			@include sprite($arrow-right-white)
+			&:hover
+				transform: translateX(7px)
+
+		.slick-slide
+			padding-left: 14px
+			padding-right: 14px
+
+	&__item
+
+
+	&__work
+		width: 320px
+		height: 270px
+		background-position: center
+		background-repeat: no-repeat
+		background-size: cover
+		margin-bottom: 18px
+
+	&__text
+		font-size: 16px
+		margin-bottom: 15px
+			
+	&__img
+		width: 60px
+		height: 60px
+		margin-right: 15px
+		img
+			border-radius: 50%
+		
+	&__data-content
+		width: calc(100% - 60px - 15px)
+
+	&__name
+		font-size: 36px
+		line-height: 30px
+		font-family: $font-family-2
+
+	&__link
+		a
+			color: #f75a94
+			font-weight: 700
+			border-color: #f75a94
+			&:hover
+				border-color: transparent
+		
+		
+		
+		
+.question
+	background-color: #f7b4cd
+	padding-top: 82px
+	padding-bottom: 80px
+	margin-bottom: 105px
+	.case
+		&:before
+			position: absolute
+			z-index: 1
+			content: ''
+			top: -30px
+			left: 50%
+			width: 1561px
+			height: 304px
+			transform: translateX(-50%)
+			margin-left: -70px
+			background: url('../../img/bg/elements.png') no-repeat center
+
+
+	&__title, &__desc
+		position: relative
+		z-index: 2
+
+	&__title
+		margin-bottom: 25px
+
+	&__desc
+		text-align: center
+		
+		
+		
+
+.steps
+	padding-bottom: 30px
+	&__item
+		width: 305px
+		position: relative
+		margin-bottom: 65px
+		&:before, &:after
+			display: block
+			content: ''
+			position: absolute
+			background-repeat: no-repeat
+			background-position: center
+		&:before
+			z-index: 2
+		&:nth-of-type(1)
+			margin-top: 90px
+			&:before
+				width: 74px
+				height: 144px
+				left: -76px
+				top: -54px
+				background-image: url('../../img/bg/one.png')
+			&:after
+				width: 104px
+				height: 73px
+				top: 29px
+				right: -117px
+				background-image: url('../../img/bg/lines/line-1.png')
+		&:nth-of-type(2)
+			&:before
+				width: 96px
+				height: 134px
+				left: -60px
+				top: -54px
+				background-image: url('../../img/bg/two.png')
+			&:after
+				width: 105px
+				height: 93px
+				top: 112px
+				right: -114px
+				background-image: url('../../img/bg/lines/line-2.png')
+		&:nth-of-type(3)
+			margin-top: 65px
+			&:before
+				width: 107px
+				height: 145px
+				right: -35px
+				top: -100px
+				background-image: url('../../img/bg/three.png')
+			&:after
+				width: 173px
+				height: 405px
+				top: 95px
+				right: -95px
+				background-image: url('../../img/bg/lines/line-3.png')
+		&:nth-of-type(4)
+			margin-top: 0
+			order: 6
+			margin-right: 95px
+			&:before
+				width: 133px
+				height: 159px
+				left: -85px
+				top: -72px
+				background-image: url('../../img/bg/four.png')
+			&:after
+				width: 159px
+				height: 38px
+				top: 125px
+				left: -175px
+				background-image: url('../../img/bg/lines/line-4.png')
+		&:nth-of-type(5)
+			margin-top: 60px
+			order: 5
+			margin-right: 165px
+			&:before
+				width: 99px
+				height: 139px
+				left: -60px
+				top: -112px
+				background-image: url('../../img/bg/five.png')
+			&:after
+				width: 133px
+				height: 49px
+				top: 55px
+				left: -155px
+				background-image: url('../../img/bg/lines/line-5.png')
+		&:nth-of-type(6)
+			margin-top: 27px
+			width: 260px
+			// margin-left: -54px
+			left: -54px
+			
+	&__img
+		position: relative
+		z-index: 3
+		margin-bottom: 21px
+
+	&__name
+		font-weight: 700
+		margin-bottom: 14px
+
+	&__text
+		font-size: 16px
+		
+		
+		
+.btn-wrap
+	position: relative
+	&:before
+		content: ''
+		position: absolute
+		top: 45px
+		left: 50%
+		transform: translateX(-50%)
+		height: 12px
+		width: 100%
+		margin-top: -2px
+		background: url('../../img/bg/triangles.png') no-repeat center
+	&__btn
+		font-size: 24px
+		width: 435px
+		height: 93px
+		margin-left: auto
+		margin-right: auto
+		
+		
+		
+.instagram
+	margin-top: 85px
+	margin-bottom: 55px
+	.case
+		&:before
+			content: ''
+			position: absolute
+			top: -45px
+			left: -160px
+			width: 272px
+			height: 245px
+			background: url('../../img/bg/computer.png') no-repeat center
+		&:after
+			content: ''
+			position: absolute
+			top: 11px
+			right: -110px
+			width: 121px
+			height: 133px
+			background: url('../../img/bg/rss.png') no-repeat center
+	&__link
+		font-size: 72px
+		line-height: 64px
+		font-weight: 700
+		text-align: center
+		margin-top: 33px
+		margin-bottom: 62px
+		a
+			color: #f75a94
+			border-bottom: 5px solid transparent
+			&:hover
+				border-color: #f75a94
+
+	&__item
+		width: (100% / 6)
+		height: 320px
+		background-position: center
+		background-repeat: no-repeat
+		background-size: cover
+		
+
+.team
+	padding-top: 100px
+	&__title
+		margin-bottom: 105px
+		&:before
+			width: 927px
+			height: 107px
+			left: 50%
+			top: -14px
+			transform: translateX(-50%)
+			background-image: url('../../img/bg/text/text-bg-4.png')
+	&__list
+		position: relative
+		&:before, &:after
+			content: ''
+			display: block
+			position: absolute
+			background-position: center
+			background-repeat: no-repeat
+			width: 183px
+			height: 186px
+			top: -5px
+		&:before
+			left: -183px
+			background-image: url('../../img/bg/biceps-left.png')
+		&:after
+			right: -183px
+			background-image: url('../../img/bg/biceps-right.png')
+
+			
+
+	&__item
+		margin-right: 22px
+		margin-bottom: 50px
+		width: 276px
+		&:nth-of-type(4)
+			margin-right: 0
+		&:nth-of-type(even)
+			.team
+				&__img
+					img
+						left: 30px
+					&:before
+						background-image: url('../../img/bg/border-team-2.png')
+
+	&__img
+		position: relative
+		margin-bottom: 19px
+		img
+			z-index: 1
+			position: absolute
+			left: 38px
+			top: 32px
+			width: 215px
+			height: 315px
+		&:before
+			z-index: 2
+			position: relative
+			display: block
+			content: ''
+			width: 276px
+			height: 385px
+			background-position: center
+			background-repeat: no-repeat
+			background-image: url('../../img/bg/border-team-1.png')
+		
+	&__content
+		text-align: center
+
+	&__name
+		font-size: 20px
+		font-weight: 700
+		margin-bottom: 13px
+
+	&__position
+		font-size: 30px
+		font-family: $font-family-2
+		
+		
+		
+
+.footer
+	padding-top: 135px
+	padding-bottom: 35px
+	margin-top: -70px
+	background: url('../../img/bg/footer.png') no-repeat center top
+	.socials
+		&__text
+			position: relative
+			top: -3px
 
 
 
+.popup
+	display: none
+	position: relative
+	font-family: $font-family-1
+	border-radius: 20px
+	background-color: #fff
+	cursor: default !important
+	&_large
+		width: 1170px
+		padding: 40px 0 55px
+	&__close
+		z-index: 5
+		position: absolute
+		top: 20px
+		right: 20px
+		transition: .3s
+		cursor: pointer
+		&:hover
+			transform: rotate(90deg)
+		
+	.fancybox-close-small
+		display: none
+		
+
+.slider
+	min-height: 670px
+	position: relative
+	&__title
+		margin-bottom: 40px
+		span
+			text-align: center
+		&:before
+			content: ''
+			left: 50%
+			transform: translateX(-50%)
+		
+	&__item
+		position: absolute
+		opacity: 0
+		transform: scale(0)
+		transition: .3s
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		&_show
+			opacity: 1
+			transform: scale(1)
+		&:nth-of-type(1)
+			.slider
+				&__title
+					&:before
+						width: 908px
+						height: 98px
+						background-image: url('../../img/bg/text/text-bg-5.png')
+		&:nth-of-type(2)
+			.slider
+				&__title
+					&:before
+						width: 908px
+						height: 98px
+						background-image: url('../../img/bg/text/text-bg-5.png')
+		&:nth-of-type(3)
+			.slider
+				&__title
+					&:before
+						width: 908px
+						height: 98px
+						background-image: url('../../img/bg/text/text-bg-5.png')
+		&:nth-of-type(4)
+			.slider
+				&__title
+					span
+						font-size: 90px
+
+					&:before
+						width: 780px
+						height: 164px
+						top: 5px
+						background-image: url('../../img/bg/text/text-bg-6.png')
+		&:nth-of-type(5)
+			.slider
+				&__title
+					&:before
+						width: 705px
+						height: 98px
+						background-image: url('../../img/bg/text/text-bg-7.png')
+		&:nth-of-type(6)
+			.slider
+				&__title
+					&:before
+						width: 381px
+						height: 169px
+						top: -13px
+						background-image: url('../../img/bg/text/text-bg-8.png')
+		&:nth-of-type(7)
+			background: url('../../img/bg/lamps.png') no-repeat center 0px
+			background-size: 100% auto
+			.slider
+				&__title
+					&:before
+						width: 499px
+						height: 180px
+						top: -13px
+						background-image: url('../../img/bg/text/text-bg-9.png')
+	&__choices
+		// margin-left: -45px
+		// margin-right: -45px
+
+	&__choice
+		margin-left: 45px
+		margin-right: 45px
+		width: 290px
+		&:first-of-type
+			margin-left: 0
+		&:last-of-type
+			margin-right: 0
+
+	&__control
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 0
+		
+
+	&__step
+		margin-right: 20px
+
+	&__textarea
+		width: 660px
+		margin-left: auto
+		margin-right: auto
+		.textarea
+			&__wrap
+				min-height: 250px
+				
+	&__photo
+		padding-top: 55px
+
+	&__select
+		width: 425px
+		margin-left: auto
+		margin-right: auto
+		margin-bottom: 27px
+		&:last-of-type
+			margin-bottom: 0
+
+	&__input
+		width: 425px
+		margin-left: auto
+		margin-right: auto
+		margin-bottom: 18px
+		
+						
+
+	&__btn
+		width: 160px
+		&.btn-send
+			width: 280px
+			height: 64px
+			margin-left: auto
+			margin-right: auto
+			margin-top: 39px
+		
+		
+.photo-add
+	input
+		display: none
+	label
+		position: relative
+		display: block
+		text-align: center
+		font-weight: 700
+		&:before
+			display: block
+			content: ''
+			width: 685px
+			height: 280px
+			border: 3px dashed #bdbdbd
+			background-color: #e8e8e8
+			margin-left: auto
+			margin-right: auto
+			margin-bottom: 22px
+		&:after
+			display: block
+			content: ''
+			width: 254px
+			height: 207px
+			position: absolute
+			top: 36px
+			left: 50%
+			transform: translateX(-50%)
+			background: url('../../img/bg/photo-camera.png') no-repeat center
+.choice
+	&__wrap
+		display: block
+		background-color: #f3f3f3
+		border-radius: 5px
+		padding: 15px 11px 34px
+		position: relative
+		transition: .3s
+		cursor: pointer
+	> input
+		display: none
+		&:checked + label
+			color: #fff
+			background-color: #f75a94
+			.choice
+				&__img
+					border-color: #fff
+					
+				&__check
+					&:before
+						opacity: 0
+					&:after
+						opacity: 1
+						
+	
+		
+		
+				
+	&__img
+		border: 3px dashed #bdbdbd
+		margin-bottom: 18px
+
+	&__content
+		flex-direction: column
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		justify-content: center
+		text-align: center
+		min-height: 61px
+
+	&__title
+		font-size: 50px
+		line-height: 40px
+		font-family: $font-family-2
+		
+	&__desc
+		font-size: 24px
+		font-family: $font-family-2
+
+	&__price
+		font-size: 18px
+		font-weight: 700
+		margin-top: 3px
+		
+				
+	&__check
+		position: absolute
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		align-items: center
+		width: 52px
+		height: 52px
+		box-shadow: 0 3px 7px rgba(0, 0, 0, 0.13)
+		background-color: #ffffff
+		border-radius: 50%
+		bottom: -26px
+		left: 50%
+		transform: translateX(-50%)
+		border: 2px solid #fff
+		transition: .3s
+		&:hover
+			// border-color: #f75a94
+		&:before, &:after
+			content: ''
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			transition: .3s
+		&:before
+			@include sprite($check-gray)
+
+		&:after
+			opacity: 0
+			@include sprite($check-pink)
+		
+		
+.thanks
+	padding-top: 120px
+	&:before
+		display: block
+		content: ''
+		margin-left: auto
+		margin-right: auto
+		width: 99px
+		height: 173px
+		background: url('../../img/bg/bird-big.png')
+		margin-bottom: 53px
+	&__title
+		font-size: 124px
+		line-height: 120px
+		font-family: $font-family-2
+		margin-bottom: 25px
+
+	&__desc
+		text-align: center
+		
+		
+		
 
 
 .hidden-lg
 	display: none
+
+
+@keyframes hideProduct
+	0%
+		opacity: 1
+		transform: scale(1)
+	50%
+		opacity: 0
+		transform: scale(0)
+	100%
+		display: none
