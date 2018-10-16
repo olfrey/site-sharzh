@@ -2,6 +2,12 @@ $(document).ready(function($) {
 
 	$('.input_phone .input__wrap').mask('+7 (000) 000-00-00');
 
+	$('.product__img-slider').slick({
+		fade: true,
+		autoplay: true,
+		autoplaySpeed: 2500,
+		arrows: false
+	})
 
 	$('.product__btn').hover(function() {
 		var item = $(this).parents('.product');
